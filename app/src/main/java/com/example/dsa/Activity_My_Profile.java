@@ -1,6 +1,7 @@
 package com.example.dsa;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 import android.view.View;
@@ -35,6 +36,9 @@ public class Activity_My_Profile extends AppCompatActivity {
     Button returnBtn;
     ProgressBar progressBar;
     TextView loadingTextView;
+    TextView InsigniasText;
+    RecyclerView recyclerInsignias;
+
 
     int id;
 
@@ -65,6 +69,8 @@ public class Activity_My_Profile extends AppCompatActivity {
         returnBtn.setText("Return");
         progressBar = findViewById(R.id.profileProgressBar);
         loadingTextView = findViewById(R.id.loadingProfileText);
+        InsigniasText= findViewById(R.id.InsigniasProfileText);
+        recyclerInsignias= findViewById(R.id.RecycletInsigniasOut);
 
         titleTextView.setVisibility(View.INVISIBLE);
         editProfileImage.setVisibility(View.INVISIBLE);
@@ -84,6 +90,8 @@ public class Activity_My_Profile extends AppCompatActivity {
         editPasswordOld.setVisibility(View.INVISIBLE);
         editPasswordNew1.setVisibility(View.INVISIBLE);
         editPasswordNew2.setVisibility(View.INVISIBLE);
+        InsigniasText.setVisibility(View.INVISIBLE);
+        recyclerInsignias.setVisibility(View.INVISIBLE);
         progressBar.setVisibility(View.VISIBLE);
         loadingTextView.setVisibility(View.VISIBLE);
 
@@ -113,6 +121,8 @@ public class Activity_My_Profile extends AppCompatActivity {
             returnBtn.setVisibility(View.INVISIBLE);
             moneyOut.setVisibility(View.INVISIBLE);
             moneyText.setVisibility(View.INVISIBLE);
+            InsigniasText.setVisibility(View.INVISIBLE);
+            recyclerInsignias.setVisibility(View.INVISIBLE);
             progressBar.setVisibility(View.VISIBLE);
             loadingTextView.setVisibility(View.VISIBLE);
             ControllerUpdateUser ctrl = new ControllerUpdateUser();
@@ -138,6 +148,8 @@ public class Activity_My_Profile extends AppCompatActivity {
                 returnBtn.setVisibility(View.INVISIBLE);
                 moneyOut.setVisibility(View.INVISIBLE);
                 moneyText.setVisibility(View.INVISIBLE);
+                InsigniasText.setVisibility(View.INVISIBLE);
+                recyclerInsignias.setVisibility(View.INVISIBLE);
                 progressBar.setVisibility(View.VISIBLE);
                 loadingTextView.setVisibility(View.VISIBLE);
                 ControllerLogin ctrl = new ControllerLogin();
@@ -163,6 +175,8 @@ public class Activity_My_Profile extends AppCompatActivity {
             mailEdit.setVisibility(View.VISIBLE);
             moneyOut.setVisibility(View.INVISIBLE);
             moneyText.setVisibility(View.INVISIBLE);
+            InsigniasText.setVisibility(View.INVISIBLE);
+            recyclerInsignias.setVisibility(View.VISIBLE);
             deleteBtn.setText("Cancel");
             returnBtn.setText("Submit changes");
         }
@@ -181,6 +195,8 @@ public class Activity_My_Profile extends AppCompatActivity {
             mailEdit.setVisibility(View.INVISIBLE);
             moneyOut.setVisibility(View.INVISIBLE);
             moneyText.setVisibility(View.INVISIBLE);
+            InsigniasText.setVisibility(View.INVISIBLE);
+            recyclerInsignias.setVisibility(View.INVISIBLE);
             editPasswordOld.setVisibility(View.VISIBLE);
             editPasswordNew1.setVisibility(View.VISIBLE);
             editPasswordNew2.setVisibility(View.VISIBLE);
@@ -202,6 +218,8 @@ public class Activity_My_Profile extends AppCompatActivity {
             mailEdit.setVisibility(View.INVISIBLE);
             moneyOut.setVisibility(View.VISIBLE);
             moneyText.setVisibility(View.VISIBLE);
+            InsigniasText.setVisibility(View.INVISIBLE);
+            recyclerInsignias.setVisibility(View.VISIBLE);
             returnBtn.setText("Return");
             deleteBtn.setText("Delete account");
         }
@@ -223,6 +241,8 @@ public class Activity_My_Profile extends AppCompatActivity {
             mailEdit.setVisibility(View.VISIBLE);
             moneyOut.setVisibility(View.INVISIBLE);
             moneyText.setVisibility(View.INVISIBLE);
+            InsigniasText.setVisibility(View.INVISIBLE);
+            recyclerInsignias.setVisibility(View.VISIBLE);
             editPasswordOld.setVisibility(View.INVISIBLE);
             editPasswordNew1.setVisibility(View.INVISIBLE);
             editPasswordNew2.setVisibility(View.INVISIBLE);

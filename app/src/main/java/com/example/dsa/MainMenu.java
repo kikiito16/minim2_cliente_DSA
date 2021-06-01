@@ -12,7 +12,7 @@ import com.example.dsa.models.Credentials;
 
 public class MainMenu extends AppCompatActivity {
 
-    RelativeLayout rellayNewGame, rellayMyItems, rellayStore, rellayMyProfile, rellayStatistics, rellayLogout;
+    RelativeLayout rellayNewGame, rellayMyItems, rellayStore, rellayMyProfile, rellayStatistics, rellayLogout, rellayInsignias;
     Credentials c;
     Toast toast;
     MainMenu main = this;
@@ -32,6 +32,7 @@ public class MainMenu extends AppCompatActivity {
         rellayMyProfile = this.findViewById(R.id.rellayMyProfile);
         rellayStatistics = this.findViewById(R.id.rellayStatistics);
         rellayLogout = this.findViewById(R.id.rellayLogout);
+        rellayInsignias = this.findViewById(R.id.rellayInsignias);
 
         rellayNewGame.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -86,6 +87,15 @@ public class MainMenu extends AppCompatActivity {
             public void onClick(View v) {
                 ControllerLogOut ctrl = new ControllerLogOut();
 				ctrl.start(main, c);
+            }
+        });
+
+        rellayInsignias.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainMenu.this, Activity_Insignias.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
+                startActivity(intent);
             }
         });
     }
